@@ -1,0 +1,37 @@
+<view class="container">
+  <scroll-view
+    class="scroll-wrapper"
+    scroll-y="true"
+  >
+    <view class="list-title">
+      <text>我的设备</text>
+    </view>
+    <view class="data-wrapper">
+      <block wx:for="{{myBLEList}}" wx:key="_id">
+        <view class="data-item" data-deviceId="{{item.deviceId}}" bindtap="startConnectDevices">
+          <view class="data-content">
+            <text class="data-title">{{item.name}}</text>
+            <view class="data-desc">
+              <text class="data-source">{{item.deviceId}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="list-title">
+      <text>其他设备</text>
+    </view>
+    <view class="data-wrapper">
+      <block wx:for="{{BLEList}}" wx:key="_id">
+        <view class="data-item" data-deviceId="{{item.deviceId}}" bindtap="startConnectDevices">
+          <view class="data-content">
+            <text class="data-title">{{item.name}}</text>
+            <view class="data-desc">
+              <text class="data-source">{{item.deviceId}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

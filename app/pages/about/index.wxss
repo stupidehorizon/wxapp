@@ -1,0 +1,48 @@
+.container {
+  height: 100vh;
+  background-color:#ededed;
+}
+
+.header {
+  background-color: #0a183e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+
+.userinfo {
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.userinfo image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100rpx;
+}
+
+.userinfo .name {
+  margin-left: 20rpx;
+}
+
+.content {
+  padding: 54rpx 30rpx;
+}
+
+.content text {
+  display: block;
+}
+
+.content .title {
+  font-size: 50rpx;
+  line-height: 64rpx;
+}
+
+.content .desc {
+  font-size: 32rpx;
+  line-height: 64rpx;
+}

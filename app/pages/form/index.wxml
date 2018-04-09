@@ -1,0 +1,53 @@
+<import src="../../../packages/toast/index.wxml" />
+<template is="toast" data="{{ toast }}"></template>
+
+<import src="../../../packages/upload/index.wxml" />
+
+<view class="container">
+  <view class="form-page">
+    <form
+      bindsubmit="formSubmit"
+      class="form-wrap">
+      <view class="form-item">
+        <label>1、请描述内容<text class="must">*</text></label>
+        <textarea auto-focus name="content" />
+      </view>
+      <view class="form-item">
+        <label>2、请上传图片<text class="must">*</text><text class="remark">(图片小于5M)</text></label>
+        <template is="upload" data="{{ upload:upload }}"></template>
+      </view>
+      <view class="form-item">
+        <label>3、请选择传播的形式<text class="must">*</text></label>
+        <picker
+          bindchange="changeCarrier"
+          range="{{carrierData}}"
+          value="{{carrierIndex}}"
+          range-key="name"
+          name="carrier">
+          <view class="picker">{{carrierData[carrierIndex].name}}<text class="icon-drop"></text></view>
+        </picker>
+      </view>
+      <view class="form-item">
+        <label>4、请选择传播的渠道<text class="must">*</text></label>
+        <picker
+          bindchange="changeChannel"
+          range="{{channelData}}"
+          value="{{channelIndex}}"
+          range-key="name"
+          name="channel">
+          <view class="picker">{{channelData[channelIndex].name}}<text class="icon-drop"></text></view>
+        </picker>
+      </view>
+      <view class="form-item">
+        <view class="ident-code">
+          <input placeholder="验证码" class="input" name="captcha" />
+          <image src="{{captchaData.captcha}}" mode="aspectFill" class="image" />
+          <view>看不清，<view class="change-code" bindtap="getCaptcha">换一张</view></view>
+        </view>
+      </view>
+      <view class="report-submit">
+        <button formType="submit" class="button">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

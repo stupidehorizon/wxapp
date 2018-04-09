@@ -1,0 +1,3 @@
+@import "./toast/index.wxss";
+@import "./error-page/index.wxss";
+@import "./upload/index.wxss";

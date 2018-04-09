@@ -1,0 +1,6 @@
+<template name="error-page">
+  <view class="error-wrapper" wx:if="{{error.flag}}">
+    <text class="item code">{{error.code}}</text>
+    <text class="item msg">{{error.message}}</text>
+  </view>
+</template>

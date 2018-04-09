@@ -1,0 +1,4 @@
+<template name="toast">
+  <view class="toast toast-error" wx:if="{{toast.show && toast.type === 'error'}}" bindtap="clearToast">{{toast.title}}</view>
+  <view class="toast toast-warning" wx:if="{{toast.show && toast.type === 'warning'}}" bindtap="clearToast">{{toast.title}}</view>
+</template>

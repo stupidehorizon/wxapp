@@ -1,0 +1,25 @@
+<template name="upload">
+  <view class="image-show">
+    <block
+      wx:for="{{upload.data}}"
+      wx:key="index">
+      <view class="show-item">
+        <image
+          src="{{upload.sourceUrl}}{{item}}"
+          mode="aspectFill"
+        />
+        <text
+          class="icon icon-delete"
+          data-index="{{index}}"
+          bindtap="deleteImage"
+        />
+      </view>
+    </block>
+    <view
+      wx:if="{{upload.data.length < upload.max}}"
+      class="show-item show-addItem"
+      bindtap="uploadImage">
+      <text class="icon icon-abbre" />
+    </view>
+  </view>
+</template>

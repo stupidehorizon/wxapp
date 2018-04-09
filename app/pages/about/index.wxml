@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="header">
+    <view class="userinfo">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class="name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="content">
+    <text class="title">zz !</text>
+    <text class="desc">家庭语音智能电器远程操作系统</text>
+  </view>
+</view>

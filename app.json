@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "app/pages/list/index",
+    "app/pages/form/index",
+    "app/pages/about/index"
+  ],
+  "window": {
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "Demo",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarBackgroundColor": "#0a183e"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "我的设备",
+        "pagePath": "app/pages/list/index",
+        "iconPath": "assets/images/tabbar/list.png",
+        "selectedIconPath": "assets/images/tabbar/list@selected.png"
+      },
+      {
+        "text": "关于",
+        "pagePath": "app/pages/about/index",
+        "iconPath": "assets/images/tabbar/about.png",
+        "selectedIconPath": "assets/images/tabbar/about@selected.png"
+      }
+    ],
+    "color": "#888888",
+    "borderStyle": "black",
+    "selectedColor": "#39a615",
+    "backgroundColor": "#ffffff"
+  }
+}
